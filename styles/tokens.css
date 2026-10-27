@@ -1,0 +1,74 @@
+
+:root {
+  color-scheme: light;
+
+  /* Палитра */
+  --color-page: #f7f5f0;
+  --color-surface: #ffffff;
+  --color-surface-muted: #eee9df;
+  --color-text: #292821;
+  --color-text-muted: #6c6a60;
+  --color-primary: #356859;
+  --color-primary-hover: #254c40;
+  --color-border: #d8d2c6;
+  --color-focus: #c36b36;
+  --color-error: #b42318;
+  --color-success: #28734b;
+
+  /* Шкала отступов */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* Радиусы */
+  --radius-small: 0.375rem;
+  --radius-medium: 0.75rem;
+  --radius-large: 1.25rem;
+  --radius-pill: 999px;
+
+  /* Типографика */
+  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-heading: clamp(1.75rem, 4vw, 2.75rem);
+  --line-height-body: 1.6;
+  --line-height-heading: 1.2;
+
+  /* Контейнер и элементы */
+  --content-max: 80rem;
+  --control-min-height: 2.75rem;
+
+  /* Тени */
+  --shadow-card: 0 0.25rem 1rem rgb(41 40 33 / 8%);
+  --shadow-focus: 0 0 0 0.2rem rgb(195 107 54 / 25%);
+
+  /* Переходы */
+  --transition-fast: 160ms ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --color-page: #171b19;
+    --color-surface: #222925;
+    --color-surface-muted: #303a34;
+    --color-text: #f1f2eb;
+    --color-text-muted: #c0c8bf;
+    --color-primary: #8dc9ad;
+    --color-primary-hover: #b0e0c7;
+    --color-border: #48554c;
+    --color-focus: #f3b47d;
+    --color-error: #ffaaa3;
+    --color-success: #8dd6a8;
+
+    --shadow-card: 0 0.25rem 1rem rgb(0 0 0 / 22%);
+    --shadow-focus: 0 0 0 0.2rem rgb(243 180 125 / 25%);
+  }
+}

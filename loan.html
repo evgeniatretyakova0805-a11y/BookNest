@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выдача книги — BookNest</title>
+    
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/components.css">
+
+</head>
+<body class="site">
+    <header class="site__header">
+        <p><a class="site__brand" href="index.html">BookNest</a></p>
+
+      <nav class="site__nav" aria-label="Главная навигация">
+            <ul>
+                <li><a href="index.html">Каталог книг</a></li>
+                <li><a href="book.html">О книге</a></li>
+                <li><a href="loan.html">Выдача книги</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="site__main">
+        <h1>Форма выдачи книги</h1>
+
+        <p>Заполните форму, чтобы оформить выдачу книги в библиотеке.</p>
+
+       <form class="filter-form form-layout" action="loan.html" method="get">
+            <fieldset>
+                <legend>Информация о читателе</legend>
+
+                <p>
+                    <label for="reader-name">Фамилия и имя:</label>
+                    <input type="text" id="reader-name" name="reader_name"
+                           required minlength="2" maxlength="100"
+                           pattern="[А-Яа-яЁёA-Za-z -]+">
+                </p>
+
+                <p>
+                    <label for="reader-email">Электронная почта:</label>
+                    <input type="email" id="reader-email" name="email"
+                           required maxlength="100">
+                </p>
+
+                <p>
+                    <label for="reader-phone">Номер телефона:</label>
+                    <input type="tel" id="reader-phone" name="phone"
+                           required pattern="[+]?[0-9 ()-]{7,20}"
+                           maxlength="20">
+                </p>
+
+                <p>
+                    <label for="reader-id">Номер читательского билета:</label>
+                    <input type="number" id="reader-id" name="reader_id"
+                           required min="1" max="999999">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Информация о выдаче</legend>
+
+                <p>
+                    <label for="book-title">Выберите книгу:</label>
+                    <select id="book-title" name="book_title" required>
+                        <option value="">Выберите книгу</option>
+                        <option value="little-prince">Маленький принц</option>
+                        <option value="harry-potter">
+                            Гарри Поттер и философский камень
+                        </option>
+                        <option value="sherlock-holmes">Шерлок Холмс</option>
+                        <option value="1984">1984</option>
+                        <option value="time">Краткая история времени</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="loan-date">Дата получения:</label>
+                    <input type="date" id="loan-date" name="loan_date"
+                           required min="2026-01-01">
+                </p>
+
+                <p>
+                    <label for="return-date">Планируемая дата возврата:</label>
+                    <input type="date" id="return-date" name="return_date"
+                           required min="2026-01-01">
+                </p>
+
+                <p>
+                    <label for="loan-period">Срок выдачи в днях:</label>
+                    <input type="number" id="loan-period" name="loan_period"
+                           required min="1" max="30" value="14">
+                </p>
+
+                <p>
+                    <label for="reader-comment">Комментарий:</label>
+                    <textarea id="reader-comment" name="comment"
+                              rows="4" maxlength="500"></textarea>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="rules" name="rules"
+                           value="accepted" required>
+                    <label for="rules">
+                        Я согласен(на) с правилами выдачи книг.
+                    </label>
+                </p>
+            </fieldset>
+
+            <button type="submit">Отправить заявку</button>
+            <button type="reset">Очистить форму</button>
+        </form>
+    </main>
+
+    <footer class="site__footer">
+        <p>BookNest — библиотека для любителей чтения.</p>
+        <p><a href="index.html">Вернуться в каталог</a></p>
+    </footer>
+</body>
+</html>

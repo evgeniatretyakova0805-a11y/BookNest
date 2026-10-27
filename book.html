@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маленький принц — BookNest</title>
+    
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/components.css">
+
+</head>
+<body class="site">
+    <header class="site__header">
+        <p><a class="site__brand" href="index.html">BookNest</a></p>
+
+        <nav class="site__nav" aria-label="Главная навигация">
+            <ul>
+                <li><a href="index.html">Каталог книг</a></li>
+                <li><a href="book.html">О книге</a></li>
+                <li><a href="loan.html">Выдача книги</a></li>
+            </ul>
+        </nav>
+
+        <nav aria-label="Хлебные крошки">
+            <ol>
+                <li><a href="index.html">Главная</a></li>
+                <li aria-current="page">Маленький принц</li>
+            </ol>
+        </nav>
+    </header>
+
+   <main class="site__main">
+        <article class="book-detail">
+            <h1>Маленький принц</h1>
+
+            <figure class="book-detail__cover">
+                <img
+                    src="https://covers.openlibrary.org/b/title/The%20Little%20Prince-M.jpg"
+                    alt="Обложка книги «Маленький принц» Антуана де Сент-Экзюпери"
+                    width="200"
+                    height="300">
+                <figcaption>Обложка книги «Маленький принц».</figcaption>
+            </figure>
+
+            <section class="book-detail__content" aria-labelledby="details-heading">
+                <h2 id="details-heading">Характеристики книги</h2>
+
+                <dl>
+                    <dt>Автор</dt>
+                    <dd>Антуан де Сент-Экзюпери</dd>
+
+                    <dt>Жанр</dt>
+                    <dd>Философская сказка</dd>
+
+                    <dt>Год издания</dt>
+                    <dd>1943</dd>
+
+                    <dt>Количество страниц</dt>
+                    <dd>96</dd>
+
+                    <dt>Наличие</dt>
+                    <dd>Книга доступна для выдачи</dd>
+                </dl>
+            </section>
+
+            <section aria-labelledby="description-heading">
+                <h2 id="description-heading">Описание</h2>
+                <p>
+                    «Маленький принц» — произведение о дружбе,
+                    любви, ответственности и умении видеть главное.
+                    Главный герой путешествует по разным планетам,
+                    знакомится с необычными персонажами и узнаёт
+                    много нового о людях и жизни.
+                </p>
+                <p><a href="loan.html">Оформить выдачу книги</a></p>
+            </section>
+
+         <section class="page" aria-labelledby="reviews-heading">
+                <h2 id="reviews-heading">Отзывы читателей</h2>
+
+                <article>
+                    <h3>Анна</h3>
+                    <p>Очень добрая и интересная книга. Советую прочитать!</p>
+                    <p>
+                        <time datetime="2026-10-10">10 октября 2026 года</time>
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Максим</h3>
+                    <p>Книга заставляет задуматься о важных вещах.</p>
+                    <p>
+                        <time datetime="2026-10-12">12 октября 2026 года</time>
+                    </p>
+                </article>
+            </section>
+
+           <section class="page" aria-labelledby="new-review-heading">
+                <h2 id="new-review-heading">Оставить отзыв</h2>
+
+               <form class="filter-form" action="book.html" method="get">
+                    <p>
+                        <label for="review-name">Ваше имя:</label>
+                        <input type="text" id="review-name" name="name"
+                               required maxlength="50">
+                    </p>
+
+                    <p>
+                        <label for="review-email">Электронная почта:</label>
+                        <input type="email" id="review-email" name="email"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="review-rating">Оценка:</label>
+                        <select id="review-rating" name="rating" required>
+                            <option value="">Выберите оценку</option>
+                            <option value="5">5 — Отлично</option>
+                            <option value="4">4 — Хорошо</option>
+                            <option value="3">3 — Нормально</option>
+                            <option value="2">2 — Плохо</option>
+                            <option value="1">1 — Очень плохо</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="review-text">Текст отзыва:</label>
+                        <textarea id="review-text" name="review"
+                                  rows="5" maxlength="1000"
+                                  required></textarea>
+                    </p>
+
+                    <button type="submit">Отправить отзыв</button>
+                </form>
+            </section>
+        </article>
+
+       <aside class="book-detail__aside" aria-labelledby="similar-heading">
+            <h2 id="similar-heading">Похожие книги</h2>
+            <ul>
+                <li><a href="book.html">Алиса в Стране чудес</a></li>
+                <li><a href="book.html">Приключения Тома Сойера</a></li>
+                <li><a href="book.html">Ветер в ивах</a></li>
+            </ul>
+        </aside>
+    </main>
+
+  <footer class="site__footer">
+        <p>BookNest — библиотека для любителей чтения.</p>
+        <p><a href="index.html">Вернуться в каталог</a></p>
+    </footer>
+</body>
+</html>
