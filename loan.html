@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Выдача книги — BookNest</title>
-</head>
-<body>
-    <header>
-        <p><a href="index.html">BookNest</a></p>
+    
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/components.css">
 
-        <nav aria-label="Главная навигация">
+</head>
+<body class="site">
+    <header class="site__header">
+        <p><a class="site__brand" href="index.html">BookNest</a></p>
+
+      <nav class="site__nav" aria-label="Главная навигация">
             <ul>
                 <li><a href="index.html">Каталог книг</a></li>
                 <li><a href="book.html">О книге</a></li>
@@ -19,12 +25,12 @@
         </nav>
     </header>
 
-    <main>
+    <main class="site__main">
         <h1>Форма выдачи книги</h1>
 
         <p>Заполните форму, чтобы оформить выдачу книги в библиотеке.</p>
 
-        <form action="loan.html" method="get">
+       <form class="filter-form form-layout" action="loan.html" method="get">
             <fieldset>
                 <legend>Информация о читателе</legend>
 
@@ -110,7 +116,7 @@
         </form>
     </main>
 
-    <footer>
+    <footer class="site__footer">
         <p>BookNest — библиотека для любителей чтения.</p>
         <p><a href="index.html">Вернуться в каталог</a></p>
     </footer>

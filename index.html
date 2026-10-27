@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookNest — Каталог книг</title>
-</head>
-<body>
-    <header>
-        <p><a href="index.html">BookNest</a></p>
+    
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/components.css">
 
-        <nav aria-label="Главная навигация">
+</head>
+<body class="site">
+    <header class="site__header">
+        <p><a class="site__brand" href="index.html">BookNest</a></p>
+
+    <nav class="site__nav" aria-label="Главная навигация">
             <ul>
                 <li><a href="index.html">Каталог книг</a></li>
                 <li><a href="book.html">О книге</a></li>
@@ -19,13 +25,13 @@
         </nav>
     </header>
 
-    <main>
-        <h1>Каталог книг</h1>
+ <main class="site__main">
+    <h1>Каталог книг</h1>
 
-        <section aria-labelledby="filters-heading">
+      <section class="catalog__filters" aria-labelledby="filters-heading">
             <h2 id="filters-heading">Поиск и фильтры</h2>
 
-            <form action="index.html" method="get">
+          <form class="filter-form" action="index.html" method="get">
                 <p>
                     <label for="search">Название или автор:</label>
                     <input type="search" id="search" name="search"
@@ -62,10 +68,10 @@
             </form>
         </section>
 
-        <section aria-labelledby="books-heading">
+       <section class="catalog__list" aria-labelledby="books-heading">
             <h2 id="books-heading">Наши книги</h2>
 
-            <article>
+            <article class="book-card">
                 <h3><a href="book.html">Маленький принц</a></h3>
                 <p>Автор: Антуан де Сент-Экзюпери</p>
                 <p>Жанр: сказка</p>
@@ -115,7 +121,7 @@
         </section>
     </main>
 
-    <footer>
+   <footer class="site__footer">
         <p>BookNest — библиотека для любителей чтения.</p>
         <p><a href="loan.html">Правила выдачи книг</a></p>
         <p><small>Учебный проект, 2026</small></p>
